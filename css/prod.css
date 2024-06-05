@@ -41,7 +41,8 @@
   width: 150px;
   height: 150px;
   padding: 0;
-  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,6 +51,7 @@
 }
 
 .desc {
+  margin-top: 2px;
   display: flex;
   width: 90%;
   justify-content: space-between;
@@ -60,11 +62,16 @@
   font-style: normal;
 }
 .foodpic {
-  margin: 2px auto;
-  width: 70%;
+  margin: 2px auto 0px;
+  width: 75%;
+  max-height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .foodpic img {
-  width: 100%;
+  width: 95%;
+  height: 90%;
 }
 .form {
   width: 75%;
@@ -78,8 +85,11 @@
   text-align: right;
 }
 .gridbox button {
-  padding: 0;
+  padding: 1px;
   max-width: 75%;
+  background-color: #14452f;
+  color: white;
+  font-size: 0.8rem;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -134,7 +144,6 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .form {
     bottom: 0;
-    margin-bottom: 10px;
     width: 100%;
     position: absolute;
     z-index: 500;
@@ -142,6 +151,11 @@ input[type="number"]::-webkit-outer-spin-button {
   .foodpic {
     width: 100%;
     margin: 0px;
+    position: absolute;
+    top: 10px;
+  }
+  .foodpic img{
+    width: 75%;
   }
   .desc,
   .form {

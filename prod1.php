@@ -70,12 +70,12 @@
                         <p style="right: 0;">P100.00</p>
                     </div>
                     <div class="foodpic">
-                        <img src="images/breakfast/logo.png" alt="">
+                        <img src="images/breakfast/1.png" alt="">
                     </div>
                     <form action="" method="post" class="form">
                         <input type="hidden" name="pname" value="">
                         <input type="number" value="1" name="quantity">
-                        <button>add to cart</button>
+                        <button>Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
@@ -84,12 +84,12 @@
                         <p style="right: 0;">P100.00</p>
                     </div>
                     <div class="foodpic">
-                    <img src="images/breakfast/logo.png" alt="">
+                        <img src="images/breakfast/2.png" alt="">
                     </div>
                     <form action="" method="post" class="form">
                         <input type="hidden" name="pname" value="">
                         <input type="number" value="1" name="quantity">
-                        <button>add to cart</button>
+                        <button>Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
@@ -98,12 +98,12 @@
                         <p style="right: 0;">P100.00</p>
                     </div>
                     <div class="foodpic">
-                    <img src="images/breakfast/logo.png" alt="">
+                        <img src="images/breakfast/3.png" alt="">
                     </div>
                     <form action="" method="post" class="form">
                         <input type="hidden" name="pname" value="">
                         <input type="number" value="1" name="quantity">
-                        <button>add to cart</button>
+                        <button>Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
@@ -112,12 +112,12 @@
                         <p style="right: 0;">P100.00</p>
                     </div>
                     <div class="foodpic">
-                    <img src="images/breakfast/logo.png" alt="">
+                        <img src="images/breakfast/4.png" alt="">
                     </div>
                     <form action="" method="post" class="form">
                         <input type="hidden" name="pname" value="">
                         <input type="number" value="1" name="quantity">
-                        <button>add to cart</button>
+                        <button>Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
@@ -126,12 +126,12 @@
                         <p style="right: 0;">P100.00</p>
                     </div>
                     <div class="foodpic">
-                    <img src="images/breakfast/logo.png" alt="">
+                        <img src="images/breakfast/5.png" alt="">
                     </div>
                     <form action="" method="post" class="form">
                         <input type="hidden" name="pname" value="">
                         <input type="number" value="1" name="quantity">
-                        <button>add to cart</button>
+                        <button>Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
@@ -140,12 +140,12 @@
                         <p style="right: 0;">P100.00</p>
                     </div>
                     <div class="foodpic">
-                    <img src="images/breakfast/logo.png" alt="">
+                        <img src="images/breakfast/6.png" alt="">
                     </div>
                     <form action="" method="post" class="form">
                         <input type="hidden" name="pname" value="">
                         <input type="number" value="1" name="quantity">
-                        <button>add to cart</button>
+                        <button>Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
@@ -154,12 +154,12 @@
                         <p style="right: 0;">P100.00</p>
                     </div>
                     <div class="foodpic">
-                    <img src="images/breakfast/logo.png" alt="">
+                        <img src="images/breakfast/7.png" alt="">
                     </div>
                     <form action="" method="post" class="form">
                         <input type="hidden" name="pname" value="">
                         <input type="number" value="1" name="quantity">
-                        <button>add to cart</button>
+                        <button>Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
@@ -168,12 +168,12 @@
                         <p style="right: 0;">P100.00</p>
                     </div>
                     <div class="foodpic">
-                    <img src="images/breakfast/logo.png" alt="">
+                        <img src="images/breakfast/8.png" alt="">
                     </div>
                     <form action="" method="post" class="form">
                         <input type="hidden" name="pname" value="">
                         <input type="number" value="1" name="quantity">
-                        <button>add to cart</button>
+                        <button>Add to Cart</button>
                     </form>
                 </i>
             </div>
