@@ -1,0 +1,144 @@
+/*
+  color: #1D2E28;
+  color: #14452f;
+*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.nav-cont {
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.navbar {
+  margin: 0px auto;
+  max-width: 1200px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+.navbar a {
+  color: #14452f;
+  transition: color .5s ease;
+}
+.navbar a:hover{
+  color: #0e2e1f;
+}
+.navimg a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.navimg h1 {
+  font-size: 1rem;
+}
+.navimg img {
+  width: 50px;
+  margin-right: 10px;
+}
+.navlinks {
+  margin-left: auto;
+  display: flex;
+}
+.navlinks a {
+  font-size: 20px;
+}
+.navlinks a:not(#link4, #link5) {
+  margin-right: 30px;
+}
+.navlinks #link5 {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar {
+    padding: 0px;
+  }
+  .navimg {
+    margin: auto;
+  }
+  .navlinks a:not(#link5) {
+    display: none;
+  }
+  .navlinks {
+    margin: 0px;
+  }
+  .navlinks #link5 {
+    position: fixed;
+    right: 0;
+    top: 26px;
+    margin-right: 20px;
+    display: block;
+  }
+}
+
+.ddown-content {
+  display: none;
+  width: 75px;
+  padding: 0;
+  position: absolute;
+  background-color: white;
+  border-radius: 0px 10px 0px 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+a#l1{
+    border-radius: 0px 10px 0px 0px;
+}
+a#l4{
+    border-radius: 0px 0px 0px 10px;
+}
+.ddown-content a:not(a#l4){
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.ddown-content a {
+  display: block;
+  font-family: Arial;
+  font-size: 0.7rem;
+  width: 100%;
+  padding: 8px 5px;
+  text-decoration: none;
+}
+.ddown-content a:hover {
+  background-color: rgba(235, 199, 175, 0.5);
+}
+.ddown:hover .ddown-content {
+  display: block;
+}
+
+
+.details {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #1d2e28;
+}
+.details a {
+  text-decoration: none;
+  color: white;
+}
+.det {
+  line-height: 20px;
+  border: 1px solid black;
+}
+#det2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  max-width: 1200px;
+  min-height: 90vh;
+  margin: 0px auto;
+}
