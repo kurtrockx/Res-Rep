@@ -28,9 +28,9 @@ body {
 }
 .navbar a {
   color: #14452f;
-  transition: color .5s ease;
+  transition: color 0.5s ease;
 }
-.navbar a:hover{
+.navbar a:hover {
   color: #0e2e1f;
 }
 .navimg a {
@@ -91,13 +91,13 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-a#l1{
-    border-radius: 0px 10px 0px 0px;
+a#l1 {
+  border-radius: 0px 10px 0px 0px;
 }
-a#l4{
-    border-radius: 0px 0px 0px 10px;
+a#l4 {
+  border-radius: 0px 0px 0px 10px;
 }
-.ddown-content a:not(a#l4){
+.ddown-content a:not(a#l4) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .ddown-content a {
@@ -111,10 +111,10 @@ a#l4{
 .ddown-content a:hover {
   background-color: rgba(235, 199, 175, 0.5);
 }
-.ddown:hover .ddown-content {
+#link2:hover + .ddown-content,
+.ddown-content:hover {
   display: block;
 }
-
 
 .details {
   display: flex;

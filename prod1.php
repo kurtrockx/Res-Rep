@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breakfast</title>
+    <title>Menu</title>
     <script src="https://kit.fontawesome.com/0c3ddd4ac2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/navbot.css">
     <link rel="stylesheet" href="css/prod.css">
@@ -25,10 +25,14 @@
                 <div class="ddown">
                     <a href="stores.php" id="link2"><i class="fa-solid fa-store"></i></a>
                     <div class="ddown-content">
-                        <a href="#link1" id="l1">Breakfast <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link2" id="l2">Lunch <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link3" id="l3">Snacks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link4" id="l4">Drinks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="#link1" id="l1">Breakfast <i class="fa-solid fa-angles-right"
+                                style="float: right;"></i></a>
+                        <a href="#link2" id="l2">Lunch <i class="fa-solid fa-angles-right"
+                                style="float: right;"></i></a>
+                        <a href="#link3" id="l3">Snacks <i class="fa-solid fa-angles-right"
+                                style="float: right;"></i></a>
+                        <a href="#link4" id="l4">Drinks <i class="fa-solid fa-angles-right"
+                                style="float: right;"></i></a>
                     </div>
                 </div>
                 <a href="cart.php" id="link3"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -39,6 +43,174 @@
     </div>
 
     <main class="main-content">
+        <div class="cart">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th id="iname">ITEM NAME</th>
+                        <th>QUANTITY</th>
+                        <th>PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                        <td>Data 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="grid-container">
+            <p class="category">BREAKFAST</p>
+            <div class="grid" id="grid1">
+                <i class="gridbox">
+                    <div class="desc">
+                        <p>product name</p>
+                        <p style="right: 0;">P100.00</p>
+                    </div>
+                    <div class="foodpic">
+                        <img src="images/breakfast/logo.png" alt="">
+                    </div>
+                    <form action="" method="post" class="form">
+                        <input type="hidden" name="pname" value="">
+                        <input type="number" value="1" name="quantity">
+                        <button>add to cart</button>
+                    </form>
+                </i>
+                <i class="gridbox">
+                    <div class="desc">
+                        <p>product name</p>
+                        <p style="right: 0;">P100.00</p>
+                    </div>
+                    <div class="foodpic">
+                    <img src="images/breakfast/logo.png" alt="">
+                    </div>
+                    <form action="" method="post" class="form">
+                        <input type="hidden" name="pname" value="">
+                        <input type="number" value="1" name="quantity">
+                        <button>add to cart</button>
+                    </form>
+                </i>
+                <i class="gridbox">
+                    <div class="desc">
+                        <p>product name</p>
+                        <p style="right: 0;">P100.00</p>
+                    </div>
+                    <div class="foodpic">
+                    <img src="images/breakfast/logo.png" alt="">
+                    </div>
+                    <form action="" method="post" class="form">
+                        <input type="hidden" name="pname" value="">
+                        <input type="number" value="1" name="quantity">
+                        <button>add to cart</button>
+                    </form>
+                </i>
+                <i class="gridbox">
+                    <div class="desc">
+                        <p>product name</p>
+                        <p style="right: 0;">P100.00</p>
+                    </div>
+                    <div class="foodpic">
+                    <img src="images/breakfast/logo.png" alt="">
+                    </div>
+                    <form action="" method="post" class="form">
+                        <input type="hidden" name="pname" value="">
+                        <input type="number" value="1" name="quantity">
+                        <button>add to cart</button>
+                    </form>
+                </i>
+                <i class="gridbox">
+                    <div class="desc">
+                        <p>product name</p>
+                        <p style="right: 0;">P100.00</p>
+                    </div>
+                    <div class="foodpic">
+                    <img src="images/breakfast/logo.png" alt="">
+                    </div>
+                    <form action="" method="post" class="form">
+                        <input type="hidden" name="pname" value="">
+                        <input type="number" value="1" name="quantity">
+                        <button>add to cart</button>
+                    </form>
+                </i>
+                <i class="gridbox">
+                    <div class="desc">
+                        <p>product name</p>
+                        <p style="right: 0;">P100.00</p>
+                    </div>
+                    <div class="foodpic">
+                    <img src="images/breakfast/logo.png" alt="">
+                    </div>
+                    <form action="" method="post" class="form">
+                        <input type="hidden" name="pname" value="">
+                        <input type="number" value="1" name="quantity">
+                        <button>add to cart</button>
+                    </form>
+                </i>
+                <i class="gridbox">
+                    <div class="desc">
+                        <p>product name</p>
+                        <p style="right: 0;">P100.00</p>
+                    </div>
+                    <div class="foodpic">
+                    <img src="images/breakfast/logo.png" alt="">
+                    </div>
+                    <form action="" method="post" class="form">
+                        <input type="hidden" name="pname" value="">
+                        <input type="number" value="1" name="quantity">
+                        <button>add to cart</button>
+                    </form>
+                </i>
+                <i class="gridbox">
+                    <div class="desc">
+                        <p>product name</p>
+                        <p style="right: 0;">P100.00</p>
+                    </div>
+                    <div class="foodpic">
+                    <img src="images/breakfast/logo.png" alt="">
+                    </div>
+                    <form action="" method="post" class="form">
+                        <input type="hidden" name="pname" value="">
+                        <input type="number" value="1" name="quantity">
+                        <button>add to cart</button>
+                    </form>
+                </i>
+            </div>
+            <p class="category">LUNCH</p>
+            <div class="grid" id="grid2">
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+            </div>
+            <p class="category">SNACKS</p>
+            <div class="grid" id="grid3">
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+            </div>
+            <p class="category">DRINKS</p>
+            <div class="grid" id="grid4">
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+                <i class="gridbox"></i>
+            </div>
+        </div>
     </main>
 
     <footer>
