@@ -1,3 +1,10 @@
+<?php
+session_start();
+require_once "includes/dbh.inc.php";
+require "includes/cart.model.php";
+listItems($pdo, $_SESSION["userId"]);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,11 +56,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Data 1</td>
-                        <td>Data 2</td>
-                        <td>Data 3</td>
-                    </tr>
+                    <?php
+                    foreach ($_SESSION["result"] as $row) {
+                        echo "<tr>";
+                        echo "<td>" . $row['product_name'] . "</td>";
+                        echo "<td>" . $row['quantity'];
+                        echo "<td>" . $row['price'] . "</td>";
+                        echo "</tr>";
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -62,121 +73,128 @@
             <div class="grid" id="grid1">
                 <i class="gridbox">
                     <div class="desc">
-                        <p>product name</p>
-                        <p style="right: 0;">P100.00</p>
+                        <p>Tapsilog</p>
+                        <p style="right: 0;">P40.00</p>
                     </div>
                     <div class="foodpic">
                         <img src="images/breakfast/1.png" alt="">
                     </div>
                     <form action="includes/addItems.php" method="post" class="form">
-                        <input type="hidden" name="image" value="images/breakfast/2.png">
-                        <input type="hidden" name="products" value="hakdog">
-                        <input type="hidden" name="price" value="100">
+                        <input type="hidden" name="image" value="images/breakfast/1.png">
+                        <input type="hidden" name="products" value="Tapsilog">
+                        <input type="hidden" name="price" value="40">
                         <input type="number" value="1" name="quantity" min="1" max="99">
                         <button type="submit">Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
                     <div class="desc">
-                        <p>product name</p>
-                        <p style="right: 0;">P100.00</p>
+                        <p>Hotsilog</p>
+                        <p style="right: 0;">P40.00</p>
                     </div>
                     <div class="foodpic">
                         <img src="images/breakfast/2.png" alt="">
                     </div>
                     <form action="includes/addItems.php" method="post" class="form">
-                        <input type="hidden" name="products" value="hakdog">
-                        <input type="hidden" name="price" value="100">
+                        <input type="hidden" name="image" value="images/breakfast/2.png">
+                        <input type="hidden" name="products" value="Hotsilog">
+                        <input type="hidden" name="price" value="40">
                         <input type="number" value="1" name="quantity" min="1" max="99">
                         <button type="submit">Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
                     <div class="desc">
-                        <p>product name</p>
-                        <p style="right: 0;">P100.00</p>
+                        <p>Longsilog</p>
+                        <p style="right: 0;">P40.00</p>
                     </div>
                     <div class="foodpic">
                         <img src="images/breakfast/3.png" alt="">
                     </div>
                     <form action="includes/addItems.php" method="post" class="form">
-                        <input type="hidden" name="products" value="hakdog">
-                        <input type="hidden" name="price" value="100">
+                        <input type="hidden" name="image" value="images/breakfast/3.png">
+                        <input type="hidden" name="products" value="Longsilog">
+                        <input type="hidden" name="price" value="40">
                         <input type="number" value="1" name="quantity" min="1" max="99">
                         <button type="submit">Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
                     <div class="desc">
-                        <p>product name</p>
-                        <p style="right: 0;">P100.00</p>
+                        <p>Tosilog</p>
+                        <p style="right: 0;">P40.00</p>
                     </div>
                     <div class="foodpic">
                         <img src="images/breakfast/4.png" alt="">
                     </div>
                     <form action="includes/addItems.php" method="post" class="form">
-                        <input type="hidden" name="products" value="hakdog">
-                        <input type="hidden" name="price" value="100">
+                        <input type="hidden" name="image" value="images/breakfast/4.png">
+                        <input type="hidden" name="products" value="Tosilog">
+                        <input type="hidden" name="price" value="40">
                         <input type="number" value="1" name="quantity" min="1" max="99">
                         <button type="submit">Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
                     <div class="desc">
-                        <p>product name</p>
-                        <p style="right: 0;">P100.00</p>
+                        <p>Pansit Palabok</p>
+                        <p style="right: 0;">P25.00</p>
                     </div>
                     <div class="foodpic">
                         <img src="images/breakfast/5.png" alt="">
                     </div>
                     <form action="includes/addItems.php" method="post" class="form">
-                        <input type="hidden" name="products" value="hakdog">
-                        <input type="hidden" name="price" value="100">
+                        <input type="hidden" name="image" value="images/breakfast/5.png">
+                        <input type="hidden" name="products" value="Pansit Palabok">
+                        <input type="hidden" name="price" value="25">
                         <input type="number" value="1" name="quantity" min="1" max="99">
                         <button type="submit">Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
                     <div class="desc">
-                        <p>product name</p>
-                        <p style="right: 0;">P100.00</p>
+                        <p>Spaghetti</p>
+                        <p style="right: 0;">P25.00</p>
                     </div>
                     <div class="foodpic">
                         <img src="images/breakfast/6.png" alt="">
                     </div>
                     <form action="includes/addItems.php" method="post" class="form">
-                        <input type="hidden" name="products" value="hakdog">
-                        <input type="hidden" name="price" value="100">
+                        <input type="hidden" name="image" value="images/breakfast/6.png">
+                        <input type="hidden" name="products" value="Spaghetti">
+                        <input type="hidden" name="price" value="25">
                         <input type="number" value="1" name="quantity" min="1" max="99">
                         <button type="submit">Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
                     <div class="desc">
-                        <p>product name</p>
-                        <p style="right: 0;">P100.00</p>
+                        <p>Carbonara</p>
+                        <p style="right: 0;">P25.00</p>
                     </div>
                     <div class="foodpic">
                         <img src="images/breakfast/7.png" alt="">
                     </div>
                     <form action="includes/addItems.php" method="post" class="form">
-                        <input type="hidden" name="products" value="hakdog">
-                        <input type="hidden" name="price" value="100">
+                        <input type="hidden" name="image" value="images/breakfast/7.png">
+                        <input type="hidden" name="products" value="Carbonara">
+                        <input type="hidden" name="price" value="25">
                         <input type="number" value="1" name="quantity" min="1" max="99">
                         <button type="submit">Add to Cart</button>
                     </form>
                 </i>
                 <i class="gridbox">
                     <div class="desc">
-                        <p>product name</p>
-                        <p style="right: 0;">P100.00</p>
+                        <p>Pansit Bihon</p>
+                        <p style="right: 0;">P25.00</p>
                     </div>
                     <div class="foodpic">
                         <img src="images/breakfast/8.png" alt="">
                     </div>
                     <form action="includes/addItems.php" method="post" class="form">
-                        <input type="hidden" name="products" value="hakdog">
-                        <input type="hidden" name="price" value="100">
+                        <input type="hidden" name="image" value="images/breakfast/8.png">
+                        <input type="hidden" name="products" value="Pansit Bihon">
+                        <input type="hidden" name="price" value="25">
                         <input type="number" value="1" name="quantity" min="1" max="99">
                         <button type="submit">Add to Cart</button>
                     </form>

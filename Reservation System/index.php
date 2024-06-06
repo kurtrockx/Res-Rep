@@ -23,7 +23,7 @@
             <div class="navlinks">
                 <a href="index.php" id="link1"><i class="fa-solid fa-house"></i></a>
                 <div class="ddown">
-                    <a href="stores.php" id="link2"><i class="fa-solid fa-store"></i></a>
+                    <a href="menu.php" id="link2"><i class="fa-solid fa-store"></i></a>
                     <div class="ddown-content">
                         <a href="#link1" id="l1">Breakfast <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
                         <a href="#link2" id="l2">Lunch <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
