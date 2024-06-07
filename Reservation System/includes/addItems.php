@@ -12,11 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["userId"])) {
         require_once "dbh.inc.php";
         require "cart.model.php";
 
-        listItems($pdo, $_SESSION["userId"]);
-
-        $price = intval($price) * intval($quantity);
-
-        //EXISTING ENTRY OF THE PRODUCT CHOSEN//EXISTING ENTRY OF THE PRODUCT CHOSEN//EXISTING ENTRY OF THE PRODUCT CHOSEN//EXISTING ENTRY OF THE PRODUCT CHOSEN//
         $query = "SELECT * FROM products WHERE product_name = :products AND users_id = :users_id";
 
         $stmt = $pdo->prepare($query);
@@ -28,11 +23,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["userId"])) {
 
         if ($existingProduct) {
             $quantity += $existingProduct['quantity'];
+            $price = intval($price) * intval($quantity);
             $query = "UPDATE products SET quantity = :quantity, price = :price WHERE product_name = :products AND users_id = :users_id";
             $stmt = $pdo->prepare($query);
             $stmt->bindParam(":quantity", $quantity);
             $stmt->bindParam(":price", $price);
         } else {
+            $price = intval($price) * intval($quantity);
             $query = "INSERT INTO products (product_name, quantity, price, images, users_id) VALUES (:products, :quantity, :price, :image, :users_id)";
             $stmt = $pdo->prepare($query);
             $stmt->bindParam(":quantity", $quantity);

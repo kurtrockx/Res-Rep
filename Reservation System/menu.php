@@ -2,7 +2,7 @@
 session_start();
 require_once "includes/dbh.inc.php";
 require "includes/cart.model.php";
-listItems($pdo, $_SESSION["userId"]);
+listItems($pdo, $_SESSION["userId"]); 
 ?>
 
 <!DOCTYPE html>

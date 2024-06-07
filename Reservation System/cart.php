@@ -46,9 +46,10 @@ listItems($pdo, $_SESSION["userId"]);
     </div>
 
     <main class="main-content">
+        <p>whyyy</p>
 
         <div class="cart">
-            <table border="1">
+            <table>
                 <thead>
                     <tr>
                         <th>IMAGE</th>
@@ -60,21 +61,28 @@ listItems($pdo, $_SESSION["userId"]);
                 <tbody>
                     <?php
                     foreach ($_SESSION["result"] as $row) {
+
+                        $_SESSION["origPrice"] = intval($row["price"]) / $row["quantity"];
                         echo "<tr>";
-                        echo "<td> <img src='" . $row['images'] . "'> </td>";
-                        echo "<td>" . $row['product_name'] . "</td>";
-                        echo "<td>" . $row['quantity'];
+                        echo "<td id ='img'> <img src='" . $row['images'] . "'> </td>";
+                        echo "<td id = 'pname'>" . $row['product_name'] . "</td>";
+                        echo "<td id='quantity'><p>" . $row['quantity'] . "</p>";
+
+
+                        echo '<div class="form-container">';
                         echo '<form action="includes/updateQuantity.php" method="post">';
                         echo '<input type="hidden" name="updatePrice" value="' . $_SESSION['origPrice'] . '">';
-                        echo '<input type="number" name="quantity" min="1" max="99"value="' . $row['quantity'] . '" style="width: 40px;">';
-                        echo '<button name="product_name" value="' . $row['product_name'] . '">Change Quantity</button>';
+                        echo '<input type="number" name="quantity" min="1" max="99" value="' . $row['quantity'] . '">';
+                        echo '<button name="product_name" value="' . $row['product_name'] . '"><i class="fa-solid fa-rotate-right"></i></button>';
                         echo '</form>';
 
                         echo '<form action="includes/delete.php" method="post">';
-                        echo '<button name="pname" value="' . $row['product_name'] . '">Delete</button>';
+                        echo '<button name="pname" value="' . $row['product_name'] . '"><i class="fa-solid fa-x"></i></button>';
                         echo '</form>';
-                        "</td>";
-                        echo "<td>" . $row['price'] . "</td>";
+                        echo '</div>';
+                        
+                        echo "</td>";
+                        echo "<td id = 'price'>" . $row['price'] . "</td>";
                         echo "</tr>";
                     }
                     ?>
