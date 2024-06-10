@@ -46,28 +46,30 @@ listItems($pdo, $_SESSION["userId"]);
     </div>
 
     <main class="main-content">
-        <div class="cart">
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th id="iname">ITEM NAME</th>
-                        <th>QUANTITY</th>
-                        <th>PRICE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    foreach ($_SESSION["result"] as $row) {
-                        echo "<tr>";
-                        echo "<td id='name'>" . $row['product_name'] . "</td>";
-                        echo "<td id='quantity'>" . $row['quantity'];
-                        echo "<td id='price'>" . $row['price'] . "</td>";
-                        echo "</tr>";
-                    }
-                    ?>
-                </tbody>
-            </table>
-            <button id="cout"><a href="cart.php">PROCEED</a></button>
+        <div class="cwb">
+            <div class="cart">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th id="iname">ITEM NAME</th>
+                            <th>QUANTITY</th>
+                            <th>PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($_SESSION["result"] as $row) {
+                            echo "<tr>";
+                            echo "<td id='name'>" . $row['product_name'] . "</td>";
+                            echo "<td id='quantity'>" . $row['quantity'];
+                            echo "<td id='price'>" . $row['price'] . "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+            <button id="cout"><a href="cart.php">Manage cart</a></button>
         </div>
         <div class="grid-container">
             <p class="category" id="breakfast">BREAKFAST</p>
