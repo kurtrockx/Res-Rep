@@ -3,6 +3,7 @@ session_start();
 require_once "includes/dbh.inc.php";
 require "includes/cart.model.php";
 listItems($pdo, $_SESSION["userId"]);
+total_Price($pdo, $_SESSION["userId"]);
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +81,7 @@ listItems($pdo, $_SESSION["userId"]);
                         echo '<button name="pname" value="' . $row['product_name'] . '"><i class="fa-solid fa-x"></i></button>';
                         echo '</form>';
                         echo '</div>';
-                        
+
                         echo "</td>";
                         echo "<td id = 'price'>" . $row['price'] . "</td>";
                         echo "</tr>";
@@ -89,7 +90,49 @@ listItems($pdo, $_SESSION["userId"]);
 
                 </tbody>
             </table>
+            
+            <div class="tPrice">
+                <?php
+                echo "<p>Total Price: </p> <p id = 'tPrice'> {$_SESSION['total_Price']}";
+                ?>
+                <div class="butPrice">
+                    <button type="submit" id="openPopupBtn">
+                        <p>Pay Now</p>
+                    </button>
+                </div>
+            </div>
+
         </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <img src="Images/qr.png" alt="Popup Image">
+                <form action="includes/checkout/checkout.php" method="post">
+                    <br>
+                    <label>Last 6 digits of GCASH ref no.</label><br>
+                    <input type="text" pattern=".{6,6}" required name="refno" style="width: 55px; font-family:'Times New Roman', Times, serif; font-size: 15px;">
+                    <button type="submit" style="font-family: 'Times New Roman', Times, serif; font-size: 15px; background-color: #093a1b; color: white;">Checkout</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('openPopupBtn').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'flex';
+            });
+
+            document.querySelector('.close-btn').addEventListener('click', function() {
+                document.getElementById('popup').style.display = 'none';
+            });
+
+            window.addEventListener('click', function(event) {
+                const popup = document.getElementById('popup');
+                if (event.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        </script>
 
     </main>
 

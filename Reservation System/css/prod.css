@@ -4,16 +4,19 @@
 }
 .cart {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   height: 400px;
   margin-top: 10px;
   margin-left: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
   font-family: arial;
   font-size: 1rem;
 }
 .cart table {
   border-collapse: collapse;
+  margin-bottom: 5px;
 }
 .cart table th {
   padding: 2px 10px;
@@ -21,7 +24,22 @@
 #iname {
   padding: 0 25px;
 }
+#quantity,
+#price {
+  text-align: center;
+}
+#cout {
+  position: fixed;
+  margin-top: 410px;
+  margin-left: 250px;
+  background-color: #14452f;
+}
+#cout a {
+  text-decoration: none;
+  color: white;
+}
 .category {
+  scroll-margin-top: 100px;
   text-align: center;
   font-size: 1rem;
 }
@@ -42,7 +60,7 @@
   height: 150px;
   padding: 0;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;

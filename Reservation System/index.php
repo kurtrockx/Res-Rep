@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <div class="nav-cont">
         <nav class="navbar">
             <div class="navimg">
@@ -25,10 +25,10 @@
                 <div class="ddown">
                     <a href="menu.php" id="link2"><i class="fa-solid fa-store"></i></a>
                     <div class="ddown-content">
-                        <a href="#link1" id="l1">Breakfast <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link2" id="l2">Lunch <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link3" id="l3">Snacks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link4" id="l4">Drinks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="menu.php#breakfast" id="l1">Breakfast <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="menu.php#lunch" id="l2">Lunch <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="menu.php#snacks" id="l3">Snacks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="menu.php#drinks" id="l4">Drinks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
                     </div>
                 </div>
                 <a href="cart.php" id="link3"><i class="fa-solid fa-cart-shopping"></i></a>

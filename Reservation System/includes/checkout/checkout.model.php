@@ -2,36 +2,17 @@
 
 declare(strict_types = 1);
 
-function getDetails(object $pdo, string $usersId){
-    
+function getDetails(object $pdo, string $usersId)
+{
+
     $query = "SELECT * FROM products WHERE users_id = :userid;";
 
     $stmt = $pdo->prepare($query);
-    $stmt -> bindparam(":userid", $usersId);
-    $stmt -> execute();
+    $stmt->bindparam(":userid", $usersId);
+    $stmt->execute();
 
     $_SESSION["prodDetails"] = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-
-
-function total_Price(object $pdo, string $usersId){
-
-    $query = "SELECT price FROM products WHERE users_id = :userid;";
-
-    $stmt = $pdo->prepare($query);
-    $stmt -> bindparam(":userid", $usersId);
-    $stmt -> execute();
-
-    $tprice = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $totalPrice = 0;
-
-    foreach($tprice as $rows){
-        $totalPrice += $rows["price"];
-    }
-
-    $_SESSION["total_Price"] = $totalPrice;
-}
-
 
 function moveItems(object $pdo, string $userId, string $refno){
 

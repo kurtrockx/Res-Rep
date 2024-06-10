@@ -35,8 +35,8 @@
   flex-direction: column;
 }
 .gridbox:hover {
-  background-color: rgba(235, 199, 175, 0.5);
-  transform: scale(101%);
+  background-color: rgba(0, 0, 0, 0.02);
+  transform: scale(99%);
 }
 .gridbox img {
   border-radius: 0px 20px 0px 20px;
