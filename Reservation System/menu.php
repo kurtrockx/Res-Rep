@@ -30,12 +30,12 @@ listItems($pdo, $_SESSION["userId"]);
             <div class="navlinks">
                 <a href="index.php" id="link1"><i class="fa-solid fa-house"></i></a>
                 <div class="ddown">
-                    <a href="stores.php" id="link2"><i class="fa-solid fa-store"></i></a>
+                    <a href="menu.php" id="link2"><i class="fa-solid fa-store"></i></a>
                     <div class="ddown-content">
-                        <a href="#link1" id="l1">Breakfast <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link2" id="l2">Lunch <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link3" id="l3">Snacks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
-                        <a href="#link4" id="l4">Drinks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="menu.php#breakfast" id="l1">Breakfast <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="menu.php#lunch" id="l2">Lunch <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="menu.php#snacks" id="l3">Snacks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
+                        <a href="menu.php#drinks" id="l4">Drinks <i class="fa-solid fa-angles-right" style="float: right;"></i></a>
                     </div>
                 </div>
                 <a href="cart.php" id="link3"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -69,7 +69,7 @@ listItems($pdo, $_SESSION["userId"]);
                     </tbody>
                 </table>
             </div>
-            <button id="cout"><a href="cart.php">Manage cart</a></button>
+            <button id="cout"><a href="cart.php">Manage Cart</a></button>
         </div>
         <div class="grid-container">
             <p class="category" id="breakfast">BREAKFAST</p>
