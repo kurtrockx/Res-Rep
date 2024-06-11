@@ -7,6 +7,7 @@
   border-radius: 10px;
 }
 #tagline {
+  color: #1d2e28;
   margin: 20px auto;
   font-family: arial;
   text-align: center;
@@ -15,7 +16,6 @@
 }
 .grid {
   width: 100%;
-  margin-bottom: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
@@ -55,7 +55,25 @@
   background-color: #1d2e28;
   color: white;
 }
+
+.welcome {
+  margin-top: 100px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: arial;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #14452f;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+.welcome p {
+  display: inline;
+  text-decoration: underline;
+}
 @media screen and (max-width: 1250px) {
+  .welcome {
+    font-size: 2.5rem;
+  }
   .grid {
     column-gap: 10px;
     padding: 0px 10px;
@@ -77,6 +95,10 @@
     width: 220px;
     height: 240px;
   }
+  .welcome {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -90,6 +112,9 @@
   .gridbox {
     width: 320px;
     height: 340px;
+  }
+  .welcome {
+    font-size: 2rem;
   }
 }
 
@@ -120,5 +145,8 @@
   #grid4 {
     grid-column: 1;
     grid-row: 4;
+  }
+  .welcome {
+    font-size: 1.5rem;
   }
 }

@@ -1,5 +1,9 @@
 <?php
 session_start();
+require_once "includes/dbh.inc.php";
+require_once "includes/cart.model.php";
+idNumber($pdo, $_SESSION["userId"]);
+orderlist($pdo, $_SESSION["userId"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +14,7 @@ session_start();
     <title>Reservation System</title>
     <script src="https://kit.fontawesome.com/0c3ddd4ac2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/navbot.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/users.css">
 </head>
 
 <body>
@@ -42,30 +46,64 @@ session_start();
     </div>
 
     <main class="main-content">
-        <div class="banner">
-            <img src="images/banner2.png" alt="">
-        </div>
-        <P id="tagline">WE AIM TO GIVE THE BEST</P>
-        <div class="grid">
-            <i class="gridbox" id="grid1">
-                <img src="images/Breakfast/tnail.png">
-                <a href="prod1.php"><button class="ordnow">ORDER NOW</button></a>
-            </i>
-            <i class="gridbox" id="grid2">
-                <img src="images/Noon/tnail.png">
-                <a href=""><button class="ordnow">ORDER NOW</button></a>
-            </i>
-            <i class="gridbox" id="grid3">
-                <img src="images/Snacks/tnail.png">
-                <a href=""><button class="ordnow">ORDER NOW</button></a>
-            </i>
-            <i class="gridbox" id="grid4">
-                <img src="images/Drinks/tnail.png">
-                <a href=""><button class="ordnow">ORDER NOW</button></a>
-            </i>
+        <div class="user">
+            <div class="logo">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="deets">
+                <div class="ails">Username: <p><?php echo "{$_SESSION['username']}"; ?> </p>
+                </div>
+                <div class="ails">Email: <p><?php echo "{$_SESSION['email']}"; ?> </p>
+                </div>
+                <div class="ails">ID Number: <p><?php echo "{$_SESSION["idNumber"]}"; ?> </p>
+                </div>
+                <div class="ails">
+                    <form action='includes/comments.php' method='post'>
+                        <label for='message'>Send us a message:</label>
+                        <button type='submit'>SEND</button>
+                        <br>
+                        <textarea id='message' name='comments'></textarea><br>
+                    </form>
+                </div>
+            </div>
         </div>
 
-        <div class="welcome">WE'RE HAPPY TO HAVE YOU <p><?php echo "{$_SESSION['username']}"; ?></p>!
+        <div class="receipt-container">
+
+            <h1>ORDER LIST</h1>
+            <hr>
+            <?php
+            if (empty($_SESSION["orderlist"])) {
+                echo "<div class='empty'>";
+                echo "No orders listed yet :)";
+                echo "</div>";
+            } else {
+                echo "<div class='grid'>";
+                foreach ($_SESSION["orderlist"] as $row) {
+                    echo "<i id='gridbox'>";
+                    echo "<div class='ono'>";
+                    echo "<p>Order Number: {$row['order_number']}</p>";
+                    echo "</div>";
+                    echo "<div class='prods'>";
+                    echo "<p style='margin: 0px';>Order Details</p>";
+                    echo "<p  style='margin: 0px auto 10px';>refno: {$row['refno']}</p>";
+                    echo "{$row['order_details']}";
+                    echo "</div>";
+                    echo "<div class='prodsprice'>";
+                    echo "Price: P{$row['total_Price']}.00";
+                    echo "</div>";
+                    echo "<div class='status'>";
+                    echo "{$row['status']}";
+                    echo "</div>";
+                    echo "</i>";
+                }
+                echo "</div >";
+            }
+
+            ?>
+
+        </div>
+
         </div>
     </main>
 

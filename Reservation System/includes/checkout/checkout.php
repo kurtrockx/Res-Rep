@@ -16,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         deleteProducts($pdo, $_SESSION["userId"]);
 
 
-        header("Location: ../cart.php");
+        header("Location: " . $_SERVER['HTTP_REFERER']);
     } catch (PDOException $e) {
         die("Query Failed: " . $e->getMessage());
     }
 } else {
-    header("Location:../index.php");
+    header("Location: " . $_SERVER['HTTP_REFERER']);
 }

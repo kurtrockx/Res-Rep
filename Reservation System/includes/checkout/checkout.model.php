@@ -56,15 +56,3 @@ function deleteProducts(object $pdo, string $usersId){
     $stmt -> bindparam(":userid", $usersId);
     $stmt -> execute();
 }
-
-function orderlist(object $pdo, string $usersId){
-    
-    $query = "SELECT * FROM checkout WHERE users_id = :userid;";
-
-    $stmt = $pdo->prepare($query);
-    $stmt -> bindparam(":userid", $usersId);
-    $stmt -> execute();
-
-    $_SESSION["orderlist"] = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
-

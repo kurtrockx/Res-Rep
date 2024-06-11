@@ -90,34 +90,45 @@ total_Price($pdo, $_SESSION["userId"]);
                     </tbody>
                 </table>
             </div>
-            </div>
+        </div>
 
-            <div class="tPrice">
-                <div id="tPrice">Total Price is: <p><?php echo "{$_SESSION["total_Price"]}"; ?>.00</p>
-                </div>
-                <img src="images/qr.png" alt="">
-                <form action="includes/checkout/checkout.php" method="post">
-                    <p>Last 6 digits of your GCASH reference number:
-                        <input type="text" pattern=".{6,6}" required name="refno" style="width: 55px; font-family:'Times New Roman', Times, serif; font-size: 15px;">
-                    <h6>(Not your Contact Number)</h6>
-                    </p>
-                    <button type="submit" id="checkout">CHECKOUT</button>
-                </form>
+        <div class="tPrice">
+            <div id="tPrice">Total Price is: <p><?php echo "{$_SESSION["total_Price"]}"; ?>.00</p>
             </div>
+            <img src="images/qr.png" alt="">
+            <form action="includes/checkout/checkout.php" method="post">
+                <p>Last 6 digits of your GCASH reference number:
+                    <input type="text" pattern=".{6,6}" required name="refno" style="width: 55px; font-family:'Times New Roman', Times, serif; font-size: 15px;">
+                <h6>(Not your Contact Number)</h6>
+                </p>
+                <button type="submit" id="checkout">CHECKOUT</button>
+            </form>
+        </div>
 
     </main>
 
     <footer>
         <div class="details">
-            <div class="det" id="det1"></div>
-            <div class="det" id="det2">
-                <a href="">About Us</a>
-                <a href="">Contact Us</a>
-                <a href="">Terms and Conditions</a>
-                <a href="">Privacy Notice</a>
+            <div class="dets">
+                <div class="det" id="det1">
+                    <h3 id="res">About CDM</h3>
+                    <a href="">About Us</a>
+                    <a href="">Contact Us</a>
+                    <a href="">Terms and Conditions</a>
+                    <a href="">Privacy Notice</a>
+                </div>
+                <div class="det" id="det2">
+                    <h3>FOLLOW US</h3>
+                    <div class="follow">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="det" id="det3"></div>
             </div>
-            <div class="det" id="det3">
-            </div>
+        </div>
         </div>
     </footer>
 
