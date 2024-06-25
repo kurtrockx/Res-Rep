@@ -15,8 +15,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         moveItems($pdo, $_SESSION["userId"], $refno);
         deleteProducts($pdo, $_SESSION["userId"]);
 
-
-        header("Location: " . $_SERVER['HTTP_REFERER']);
+        if (empty($_SESSION["result"])) {
+            header("Location: " . $_SERVER['HTTP_REFERER']);
+            $_SESSION["eCart"] = "You don't have any items in your cart!";
+        } else {
+            header("Location: ../../users.php");
+        }
     } catch (PDOException $e) {
         die("Query Failed: " . $e->getMessage());
     }

@@ -165,13 +165,38 @@ td {
   font-size: 1rem;
   text-align: right;
 }
-
 #quantity button:hover .fa-solid.fa-rotate-right {
   animation: spin 0.2s linear 1;
 }
 #quantity button:hover .fa-solid.fa-x {
   transform: scale(95%);
 }
+
+.empty {
+  margin: 50px 10px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #14452f;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 3rem;
+}
+.empty img {
+  width: 75%;
+}
+.eCart {
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  width: 300px;
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%);
+  font-family: Arial;
+  font-weight: bold;
+  color: red;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -293,5 +318,8 @@ td {
   }
   td {
     font-size: 0.6rem;
+  }
+  .empty {
+    font-size: 2rem;
   }
 }

@@ -48,17 +48,24 @@ total_Price($pdo, $_SESSION["userId"]);
 
     <main class="main-content">
         <div class="cart">
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>IMAGE</th>
-                            <th>ITEM NAME</th>
-                            <th>QUANTITY</th>
-                            <th>PRICE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <?php
+            if (empty($_SESSION["result"])) {
+                echo "<div class='empty'>Your cart is empty";
+                echo "<img src='images/empty.png'>";
+                echo "</div>";
+            } else { ?>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>IMAGE</th>
+                                <th>ITEM NAME</th>
+                                <th>QUANTITY</th>
+                                <th>PRICE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         <?php
                         foreach ($_SESSION["result"] as $row) {
 
@@ -85,11 +92,11 @@ total_Price($pdo, $_SESSION["userId"]);
                             echo "<td id = 'price'>" . $row['price'] . "</td>";
                             echo "</tr>";
                         }
-                        ?>
+                    } ?>
 
-                    </tbody>
-                </table>
-            </div>
+                        </tbody>
+                    </table>
+                </div>
         </div>
 
         <div class="tPrice">
@@ -103,6 +110,12 @@ total_Price($pdo, $_SESSION["userId"]);
                 </p>
                 <button type="submit" id="checkout">CHECKOUT</button>
             </form>
+            <?php
+            if (isset($_SESSION["eCart"])) {
+                echo "<div class='eCart'>{$_SESSION['eCart']}</div>";
+                unset($_SESSION["eCart"]);
+            }
+            ?>
         </div>
 
     </main>

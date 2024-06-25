@@ -39,7 +39,7 @@ orderlist($pdo, $_SESSION["userId"]);
                     </div>
                 </div>
                 <a href="cart.php" id="link3"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="../Login/logout.php" id="link4"><i class="fa-regular fa-user"></i></a>
+                <a href="users.php" id="link4"><i class="fa-regular fa-user"></i></a>
                 <a href="menu.php" id="link5"><i class="fa-solid fa-bars"></i></a>
             </div>
         </nav>

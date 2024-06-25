@@ -48,15 +48,19 @@ listItems($pdo, $_SESSION["userId"]);
     <main class="main-content">
         <div class="cwb">
             <div class="cart">
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th id="iname">ITEM NAME</th>
-                            <th>QUANTITY</th>
-                            <th>PRICE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <?php
+                if (empty($_SESSION["result"])) {
+                    echo "<div class='empty'>Your cart is empty</div>";
+                } else { ?>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th id="iname">ITEM NAME</th>
+                                <th>QUANTITY</th>
+                                <th>PRICE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         <?php
                         foreach ($_SESSION["result"] as $row) {
                             echo "<tr>";
@@ -65,9 +69,9 @@ listItems($pdo, $_SESSION["userId"]);
                             echo "<td id='price'>" . $row['price'] . "</td>";
                             echo "</tr>";
                         }
-                        ?>
-                    </tbody>
-                </table>
+                    } ?>
+                        </tbody>
+                    </table>
             </div>
             <button id="cout"><a href="cart.php">Manage Cart</a></button>
         </div>
